@@ -1,0 +1,177 @@
+@import "../../config/styles/mixins.scss";
+@import "../../config/styles/color.scss";
+
+.header-portfolio {
+  position: fixed;
+  width: 100%;
+  @include displayFlex(row, space-between, center);
+  color: #fff;
+  background-color: $primary-font-color;
+  padding: 0.5rem;
+  z-index: 9999;
+  h1 {
+    font-size: 1.6rem;
+  }
+  .user-profile {
+    @include displayFlex(row, space-between, center);
+    img {
+      width: 5rem;
+      border-radius: 100%;
+      margin-left: 3rem;
+    }
+    h1 {
+      margin-left: 2rem;
+    }
+  }
+  .nav-content {
+    padding: 0;
+    .list-option-nav {
+      list-style: none;
+      @include displayFlex(row, center, center);
+      margin-bottom: 0;
+      a {
+        text-decoration: none;
+        li {
+          cursor: pointer;
+          padding: 2rem;
+          h1 {
+            color: #fff;
+            font-size: 1.5rem;
+          }
+          margin-right: 1rem;
+          transition: all 0.5s ease;
+          border-bottom: 2px solid #ff00ff00;
+          &:hover {
+            border-bottom: 2px solid $magenta;
+          }
+        }
+      }
+    }
+  }
+  .display-nav {
+    display: none;
+  }
+  @media (max-width: 835px) {
+    .user-profile {
+      img {
+        width: 4rem;
+        border-radius: 100%;
+        margin-left: 1rem;
+      }
+      h1 {
+        margin-left: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+    .nav-content {
+      .list-option-nav {
+        li {
+          padding: 2rem 1rem;
+          h1 {
+            a {
+              font-size: 1.3rem;
+            }
+          }
+          margin-right: 0rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    position: fixed;
+    width: 100%;
+    @include displayFlex(row, space-between, center);
+    color: #fff;
+    background-color: $primary-font-color;
+    padding: 0.5rem;
+    z-index: 9999;
+    .user-profile {
+      @include displayFlex(row, space-between, center);
+    }
+    .nav-content {
+      overflow: hidden;
+      position: fixed;
+      height: 0px;
+      top: 50px;
+      right: 0px;
+      padding: 0;
+      z-index: 9999;
+      background-color: $primary-font-color;
+      transition: all 0.2s ease-in-out;
+      .list-option-nav {
+        list-style: none;
+        @include displayFlex(column, center, center);
+        margin-bottom: 0;
+        padding: 1rem;
+
+        * {
+          margin: 0px;
+        }
+        .option-list {
+          text-align: center;
+          width: 100%;
+          padding: 1rem;
+          padding-right: 0px;
+          margin: 0px;
+          margin-right: 1rem;
+          transition: all 0.5s ease;
+          border-bottom: 2px solid #ff00ff00;
+          &:hover {
+            border-bottom: 2px solid $magenta;
+          }
+        }
+      }
+      &.display-true {
+        height: 190px;
+      }
+    }
+    .display-nav {
+      @include displayFlex(row, center, center);
+      margin-top: 1rem;
+      cursor: pointer;
+      z-index: 99999;
+      .icon-content {
+        width: 30px;
+        height: 2px;
+        background-color: $magenta;
+        transition: all 0.2s ease-in-out;
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 10.5px;
+          width: 30px;
+          height: 2px;
+          background-color: $magenta;
+          transform: rotate(0deg);
+          transition: all 0.2s ease-in-out;
+        }
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 20px;
+          width: 30px;
+          height: 2px;
+          background-color: $magenta;
+          transform: rotate(0deg);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      &.display-true {
+        .icon-content {
+          height: 2px;
+          background-color: transparent;
+          &::before {
+            top: 20px;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top: 20px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}

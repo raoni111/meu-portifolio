@@ -1,0 +1,20 @@
+@import './config/styles/color.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+* {
+  scroll-behavior: smooth;
+  padding: 0px;
+  font-size: 62.5%;
+  border: none;
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Fira Code', monospace;
+  &::-webkit-scrollbar {
+    width: 15px;
+    margin-left: 1rem;
+    background-color: $primary-font-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $magenta;
+    border-radius: 20px;
+  }
+}

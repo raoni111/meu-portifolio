@@ -1,0 +1,288 @@
+@import "../../config/styles/mixins.scss";
+@import "../../config/styles/color.scss";
+
+.home-content {
+  @include displayFlex(row, center, center);
+  width: 100%;
+  height: 100vh;
+  background-size: 30%;
+  background-image: url("./img/endless-constellation\ \(1\).svg");
+  background-color: rgb(255, 255, 255);
+  .section-element {
+    height: 100vh;
+    &.home-section-one {
+      @include displayFlex(row, center, center);
+      width: 40%;
+      background-color: #ffffff00;
+      .user-bios {
+        height: 60%;
+        width: 65%;
+        h1 {
+          @include displayFlex(column, center, start);
+          font-size: 5rem;
+          color: #000;
+          border-bottom: 0.3rem solid $primary-font-color;
+          @media (max-width: 1400px) {
+            font-size: 3rem;
+            font-weight: 600;
+          }
+
+          .developer-content {
+            @include displayFlex(row, flex-start, center);
+            h1 {
+              font-size: 3rem;
+              border: none;
+            }
+            .stick-element {
+              margin-left: 0.1rem;
+              width: 3px;
+              height: 60px;
+              background-color: $primary-font-color;
+              animation: stickAnimation 1s reverse ease infinite;
+            }
+            @media (max-width: 1400px) {
+              h1 {
+                font-size: 2rem;
+              }
+              .stick-element {
+                width: 2px;
+                height: 40px;
+              }
+            }
+          }
+        }
+        p {
+          margin-top: 1rem;
+          font-size: 2rem;
+          @media (max-width: 1400px) {
+            font-size: 1.5rem;
+          }
+        }
+        .ability-user-content {
+          margin-top: 2rem;
+          h1 {
+            font-size: 3rem;
+            border-bottom: none;
+          }
+          .skill-list {
+            @include displayFlex(row, flex-start, center);
+            margin-top: 2rem;
+            list-style: none;
+            li.li-skill-icon-element {
+              position: relative;
+              @include displayFlex(column, center, center);
+              cursor: pointer;
+              min-width: 90px;
+              margin-right: 0.2rem;
+              border-radius: 5px;
+              padding: 0.5rem;
+              transition: all 0.3s ease-in;
+              animation: skillIconAnimation 1.2s ease-in infinite;
+              @media (max-width: 600px) {
+                min-width: auto;
+              }
+              &:nth-child(2) {
+                animation: skillIconAnimation 1.21s ease-in infinite;
+              }
+              &:nth-child(3) {
+                animation: skillIconAnimation 1.22s ease-in infinite;
+              }
+              &:nth-child(4) {
+                animation: skillIconAnimation 1.23s ease-in infinite;
+              }
+              &:nth-child(5) {
+                animation: skillIconAnimation 1.24s ease-in infinite;
+              }
+              &:nth-child(5) {
+                animation: skillIconAnimation 1.25s ease-in infinite;
+              }
+              &:hover {
+                background-color: $magenta;
+                .li-skill-icon-info {
+                  h3 {
+                    color: #fff;
+                  }
+                }
+                .skill-icon-element {
+                  color: #fff;
+                }
+              }
+              &:nth-child(1) {
+                .skill-icon-element {
+                  border-radius: 3px;
+                }
+              }
+              .skill-icon-element {
+                color: $magenta;
+                font-size: 5rem;
+                transition: all 0.3s ease-in-out;
+              }
+              .li-skill-icon-info {
+                @include displayFlex(column, center, center);
+                h3 {
+                  width: 100%;
+                  font-size: 1.3rem;
+                  text-align: center;
+                  transition: all 0.3s ease;
+                  color: transparent;
+                  @media (max-width: 800px) {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+          }
+          .more-skills {
+            cursor: pointer;
+            a {
+              u {
+                font-size: 1.7rem;
+                font-style: oblique;
+                color: $magenta;
+              }
+            }
+          }
+          @media (max-width: 1400px) {
+            h1 {
+              font-size: 2rem;
+            }
+            .skill-list {
+              li.li-skill-icon-element {
+                margin-right: 0rem;
+                h1 {
+                  font-size: 1rem;
+                }
+                .li-skill-icon-info {
+                  h3 {
+                    font-size: 1rem;
+                  }
+                }
+                .skill-icon-element {
+                  font-size: 3rem;
+                }
+              }
+            }
+            @media (max-width: 1000px) {
+              h1 {
+                font-size: 2rem;
+              }
+              .skill-list {
+                padding: 0px;
+                li.li-skill-icon-element {
+                  min-width: 60px;
+                  .li-skill-icon-info {
+                    h3 {
+                      font-size: 1rem;
+                    }
+                  }
+                  .skill-icon-element {
+                  }
+                }
+              }
+            }
+            .more-skills {
+              a {
+                u {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+            @media (max-width: 500px) {
+              h1 {
+                font-size: 2rem;
+              }
+              .skill-list {
+                padding: 0px;
+                li.li-skill-icon-element {
+                  min-width: 50px;
+                  .li-skill-icon-info {
+                    h3 {
+                      font-size: 0.8rem;
+                    }
+                  }
+                  .skill-icon-element {
+                  }
+                }
+              }
+            }
+            @media (max-width: 380px) {
+              .skill-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: 800px) {
+        width: 85%;
+        @include displayFlex(row, flex-start, center);
+        .user-bios {
+          height: 60%;
+          width: 100%;
+
+        }
+      }
+    }
+    &.home-section-two {
+      width: 50%;
+      @include displayFlex(row, center, center);
+      background-color: #ffffff00;
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+      @media (max-width: 800px) {
+        width: 0px;
+      }
+    }
+    .project-button-content {
+      margin-top: 2rem;
+      button {
+        cursor: pointer;
+        padding: 1rem;
+        background-color: #ffffff00;
+        font-weight: 600;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        color: $primary-font-color;
+        border: 2px solid $primary-font-color;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+          background-color: $primary-font-color;
+          color: #fff;
+        }
+      }
+      @media (max-width: 1400px) {
+        button {
+          margin-top: 1rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes skillIconAnimation {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: -2px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+@keyframes stickAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
