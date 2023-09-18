@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import {SiExpress, SiFirebase, SiJavascript, SiMysql, SiNodedotjs, SiReact, SiSocketdotio, SiStyledcomponents, SiTailwindcss, SiTypescript, SiWebpack} from 'react-icons/si';
+import {SiExpress, SiFirebase, SiJavascript, SiMysql, SiNodedotjs, SiReact, SiRedux, SiSequelize, SiSocketdotio, SiStyledcomponents, SiTailwindcss, SiTypescript, SiWebpack} from 'react-icons/si';
 import {TiHtml5} from 'react-icons/ti';
 import {IoLogoCss3, IoLogoSass} from 'react-icons/io';
 import {TbBrandReactNative, TbBrandSocketIo} from 'react-icons/tb';
@@ -85,6 +85,12 @@ export default function SkillContainer(): React.ReactElement {
 										Electron.js
 									</h2>
 								</li>
+								<li className='skill-list-li'>
+									<SiRedux className='icon-element' color='#8d29ff' size={40} />
+									<h2>
+										Redux
+									</h2>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -120,6 +126,12 @@ export default function SkillContainer(): React.ReactElement {
 									<FaDocker className='icon-element' color='#00b7ff' size={40} />
 									<h2>
 										Docker
+									</h2>
+								</li>
+								<li className='skill-list-li'>
+									<SiSequelize className='icon-element' color='#00b7ff' size={40} />
+									<h2>
+										Sequelize
 									</h2>
 								</li>
 								<li className='skill-list-li'>
