@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import {SiExpress, SiFirebase, SiJavascript, SiMysql, SiNodedotjs, SiReact, SiRedux, SiSequelize, SiSocketdotio, SiStyledcomponents, SiTailwindcss, SiTypescript, SiWebpack} from 'react-icons/si';
+import {SiExpress, SiFirebase, SiJavascript, SiMysql, SiNestjs, SiNodedotjs, SiReact, SiRedux, SiSequelize, SiSocketdotio, SiStyledcomponents, SiTailwindcss, SiTypescript, SiWebpack} from 'react-icons/si';
 import {TiHtml5} from 'react-icons/ti';
 import {IoLogoCss3, IoLogoSass} from 'react-icons/io';
 import {TbBrandReactNative, TbBrandSocketIo} from 'react-icons/tb';
@@ -114,6 +114,12 @@ export default function SkillContainer(): React.ReactElement {
 									<SiExpress className='icon-element' color='#00b7ff' size={40} />
 									<h2>
 										Express
+									</h2>
+								</li>
+								<li className='skill-list-li'>
+									<SiNestjs className='icon-element' color='#b91818' size={40} />
+									<h2>
+										NestJs
 									</h2>
 								</li>
 								<li className='skill-list-li'>
